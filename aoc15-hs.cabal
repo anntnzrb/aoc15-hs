@@ -1,0 +1,34 @@
+cabal-version: 2.4
+
+name:     aoc15-hs
+version:  1.0.0
+synopsis: Advent of Code 2015 Solutions, in Haskell.
+homepage: https://github.com/anntnzrb/aoc15-hs
+
+license:      GPL-3.0-or-later
+license-file: LICENSE
+author:       anntnzrb
+maintainer:   anntnzrb@protonmail.com
+category:     Learning
+
+common common-options
+    build-depends: 
+        base ^>=4.16.4.0
+    ghc-options: -Wall
+    default-language: Haskell2010
+
+library
+    import: common-options
+
+    hs-source-dirs: src
+    exposed-modules:
+        Lib,
+        Day01,
+        Day02
+
+executable aoc15-hs
+    import: common-options
+
+    main-is:        Main.hs
+    build-depends:  aoc15-hs
+    hs-source-dirs: app
