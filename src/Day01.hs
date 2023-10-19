@@ -19,9 +19,10 @@ findFirstBasement = go 0 0
 {- ------------------------------------------------------------------------- -}
 
 part1 :: String -> String
-part1 = show . sum . map (countFloors :: Char -> Int)
+part1 =
+  show
+    . sum
+    . map (countFloors :: Char -> Int)
 
 part2 :: String -> String
-part2 =
-  show
-    . findFirstBasement
+part2 = show . findFirstBasement

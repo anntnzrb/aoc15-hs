@@ -25,11 +25,8 @@ parseDimensions s = Dimensions l w h
 calcSurfacesArea :: Dimensions -> Int
 calcSurfacesArea (Dimensions l w h) = 2 * sum sides + smallestSide
   where
-    sides :: [Int]
-    sides = [l * w, w * h, h * l]
-
-    smallestSide :: Int
-    smallestSide = minimum sides
+    sides = [l * w, w * h, h * l] :: [Int]
+    smallestSide = minimum sides :: Int
 
 -- Calculates the amount of ribbon required to wrap a box with the given
 -- dimensions.
